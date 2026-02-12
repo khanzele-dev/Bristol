@@ -7,6 +7,9 @@
 }
 
 .header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
   background: #f3f3f3;
 
   &__container {
@@ -49,6 +52,9 @@
       text-decoration: none;
       transition: color 0.2s ease;
 
+      &:hover {
+        color: #666;
+      }
       &--active {
         color: $color-primary;
       }

@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   color: #ffffff;
 
@@ -51,6 +51,12 @@
     color: $color-text-inverse;
   }
 
+  &__title-main,
+  &__title-sub {
+    display: block;
+    color: $color-text-inverse;
+  }
+
   &__description {
     font-size: 28px;
     margin-bottom: 25px;
@@ -61,14 +67,13 @@
   &__info {
     display: flex;
     align-items: center;
-    grid-gap: 10px;
+    gap: 10px;
     margin-bottom: 25px;
     text-transform: uppercase;
   }
 
   &__info span {
     font-size: 14px;
-    grid-gap: 5px;
     color: $color-text-inverse;
   }
 

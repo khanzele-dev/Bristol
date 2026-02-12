@@ -110,7 +110,6 @@ function Footer() {
           <div className="footer__contacts">
             <div className="footer__contact">
               <div className="footer__contact-icon">
-                {/* 1. Tel */}
                 <svg viewBox="0 0 24 24" fill="none">
                   <path d="M13 2C15.3869 2 17.6761 2.94821 19.364 4.63604C21.0518 6.32387 22 8.61305 22 11" />
                   <path d="M13 6C14.3261 6 15.5979 6.52678 16.5355 7.46447C17.4732 8.40215 18 9.67392 18 11" />
@@ -126,7 +125,6 @@ function Footer() {
 
             <div className="footer__contact">
               <div className="footer__contact-icon">
-                {/* 2. Address */}
                 <svg viewBox="0 0 24 24" fill="none">
                   <path d="M18 8C18 11.613 14.131 15.429 12.607 16.795C12.4327 16.9282 12.2194 17.0003 12 17.0003C11.7806 17.0003 11.5673 16.9282 11.393 16.795C9.87 15.429 6 11.613 6 8C6 6.4087 6.63214 4.88258 7.75736 3.75736C8.88258 2.63214 10.4087 2 12 2C13.5913 2 15.1174 2.63214 16.2426 3.75736C17.3679 4.88258 18 6.4087 18 8Z" />
                   <path d="M12 10C13.1046 10 14 9.10457 14 8C14 6.89543 13.1046 6 12 6C10.8954 6 10 6.89543 10 8C10 9.10457 10.8954 10 12 10Z" />
@@ -142,7 +140,6 @@ function Footer() {
 
             <div className="footer__contact">
               <div className="footer__contact-icon">
-                {/* 3. Mail */}
                 <svg viewBox="0 0 24 24" fill="none">
                   <path d="M13 2C15.3869 2 17.6761 2.94821 19.364 4.63604C21.0518 6.32387 22 8.61305 22 11" />
                   <path d="M13 6C14.3261 6 15.5979 6.52678 16.5355 7.46447C17.4732 8.40215 18 9.67392 18 11" />
