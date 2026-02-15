@@ -3,7 +3,7 @@
 .footer {
   background: #171717;
   color: $color-text-white;
-  padding: 70px 0;
+  padding: 70px 0 90px;
 
   &__top {
     display: flex;
@@ -24,13 +24,13 @@
   &__contacts {
     display: flex;
     align-items: center;
-    gap: 100px;
+    gap: 120px;
   }
 
   &__contact {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
 
     &-icon {
       width: 24px;
@@ -54,9 +54,8 @@
 
       span {
         font-size: 14px;
-        opacity: 0.6;
         text-transform: lowercase;
-        color: $color-secondary;
+        color: $color-text-secondary;
       }
 
       a,
@@ -64,6 +63,7 @@
         font-size: 14px;
         color: $color-text-white;
         text-decoration: none;
+        transition: 0.1s ease;
         margin: 0;
       }
 
@@ -76,32 +76,33 @@
   &__columns {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 60px;
+    gap: 110px;
   }
 
   &__column {
     h4 {
-      font-size: 16px;
-      margin-bottom: 20px;
+      font-size: 18px;
       font-weight: 500;
+      line-height: 24px;
       color: $color-text-white;
     }
 
     ul {
+      margin-top: 16px;
       list-style: none;
       padding: 0;
-      margin: 0;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 12px;
 
       li {
-        font-size: 14px;
-        margin-bottom: 12px;
-        opacity: 0.7;
+        font-size: 16px;
         cursor: pointer;
-        transition: opacity 0.2s ease;
-        color: $color-secondary;
+        transition: all 0.2s ease;
+        color: $color-text-secondary;
 
         &:hover {
-          opacity: 1;
+          color: $color-text-white
         }
       }
     }

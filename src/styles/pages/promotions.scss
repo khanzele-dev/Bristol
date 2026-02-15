@@ -2,7 +2,7 @@
 
 .promotions-intro {
   background-color: #f3f3f3;
-  padding: 60px 0 80px;
+  padding: 40px 0 85px;
 
   &__breadcrumb {
     display: flex;
@@ -10,21 +10,17 @@
     gap: 10px;
     margin-bottom: 30px;
     font-size: 14px;
-    color: #737373;
+    color: $color-text-secondary;
   }
 
   &__breadcrumb-link {
-    color: #737373;
+    color: $color-text-secondary;
     text-decoration: none;
-    transition: 0.2s ease;
+    transition: color 0.2s ease;
 
     &:hover {
       color: #171717;
     }
-  }
-
-  &__breadcrumb-separator {
-    color: #a3a3a3;
   }
 
   &__breadcrumb-current {
@@ -39,67 +35,65 @@
   &__title {
     font-size: 42px;
     font-weight: 600;
-    margin-bottom: 20px;
-    color: #171717;
+    color: $color-text;
+    letter-spacing: 0.5%;
+    margin-top: 25px;
   }
 
   &__description {
+    margin-top: 10px;
     font-size: 18px;
-    line-height: 28px;
+    font-weight: 400;
+    line-height: 32px;
     color: #525252;
   }
 }
 
 .promotions-section {
   background: $color-text-white;
-  padding: 60px 0 80px;
-
-  &__header {
-    margin-bottom: 30px;
-  }
+  padding: 50px 0 70px;
 
   &__heading {
     font-size: 30px;
-    font-weight: 600;
-    color: #171717;
+    font-weight: 500;
+    color: #000;
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    margin-bottom: 60px;
+    gap: 100px;
+    margin-top: 50px;
   }
 
   &__card {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 18px;
   }
 
   &__card-title {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 600;
     color: $color-primary;
   }
 
   &__card-description {
-    font-size: 14px;
-    color: #666;
+    font-size: 20px;
+    font-weight: 400;
   }
 
   &__banner {
+    margin-top: 50px;
     position: relative;
     width: 100%;
     min-height: 600px;
-    border-radius: 18px;
     overflow: hidden;
     background-size: cover;
     background-position: center top;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    margin-bottom: 45px;
   }
 
   &__banner-overlay {
@@ -112,38 +106,41 @@
     position: relative;
     z-index: 2;
     max-width: 600px;
-    padding: 0 0 40px 40px;
+    padding: 0 0 70px 70px;
   }
-  
+
   &__banner-content button {
     font-size: 20px;
-    padding: 35px;
+    font-weight: 400;
+    padding: 0;
+    width: 310px;
+    height: 75px;
+    margin-top: 36px;
   }
 
   &__banner-title {
     font-size: 54px;
     font-weight: 700;
     color: $color-text-white;
-    margin-bottom: 30px;
   }
 
   /* Steps */
 
   &__steps {
-    margin-bottom: 40px;
+    margin-top: 50px;
   }
 
   &__steps-title {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #171717;
+    font-size: 30px;
+    font-weight: 500;
+    color: #000;
   }
 
   &__steps-grid {
+    margin-top: 35px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: 30px;
   }
 
   &__step {
@@ -153,47 +150,60 @@
   }
 
   &__step-number {
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    background: #f3f3f3;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 20px;
+    border: 1px solid #ddd;
+    color: $color-secondary;
     flex-shrink: 0;
   }
 
   &__step-text {
     font-size: 20px;
     font-weight: 600;
-    color: #666;
+    color: $color-secondary;
   }
 
   /* Features */
 
+  &__features {
+    margin-top: 70px;
+    width: 100%;
+  }
+
   &__features-title {
     font-size: 30px;
     font-weight: 600;
-    margin-bottom: 25px;
-    color: #171717;
   }
 
   &__features-grid {
+    margin-top: 32px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: 32px;
+  }
+
+  &__feature {
+    max-width: 280px;
   }
 
   &__feature-title {
     font-size: 20px;
     font-weight: 500;
-    margin-bottom: 10px;
+    color: #171717;
   }
 
   &__feature-description {
     font-size: 16px;
-    color: #666;
+    margin-top: 12px;
+    line-height: 25px;
+    font-weight: 400;
+    color: $color-text-secondary;
   }
 }

@@ -2,7 +2,7 @@
 
 .brands-intro {
   background-color: #f3f3f3;
-  padding: 60px 0 80px;
+  padding: 40px 0 85px;
 
   &__breadcrumb {
     display: flex;
@@ -10,21 +10,17 @@
     gap: 10px;
     margin-bottom: 30px;
     font-size: 14px;
-    color: #737373;
+    color: $color-text-secondary;
   }
 
   &__breadcrumb-link {
-    color: #737373;
+    color: $color-text-secondary;
     text-decoration: none;
     transition: color 0.2s ease;
 
     &:hover {
       color: #171717;
     }
-  }
-
-  &__breadcrumb-separator {
-    color: #a3a3a3;
   }
 
   &__breadcrumb-current {
@@ -39,13 +35,79 @@
   &__title {
     font-size: 42px;
     font-weight: 600;
-    color: #171717;
-    margin-bottom: 20px;
+    color: $color-text;
+    letter-spacing: 0.5%;
+    margin-top: 25px;
   }
 
   &__description {
+    margin-top: 10px;
     font-size: 18px;
-    line-height: 28px;
+    font-weight: 400;
+    line-height: 32px;
     color: #525252;
+  }
+}
+.brands-section {
+  background-color: $color-text-white;
+  padding: 70px 0;
+
+  &__container {
+    width: 100%;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 120px;
+    }
+    img {
+      max-width: 250px;
+      width: 100%;
+      height: auto;
+      transition: all 0.3s ease;
+      filter: grayscale(100%);
+    }
+  }
+  &__features {
+    margin-top: 90px;
+    width: 100%;
+  }
+
+  &__features-title {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  &__features-grid {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+
+  &__feature {
+    max-width: 280px;
+  }
+
+  &__feature-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #171717;
+  }
+
+  &__feature-description {
+    font-size: 16px;
+    margin-top: 12px;
+    line-height: 25px;
+    font-weight: 400;
+    color: $color-text-secondary;
   }
 }

@@ -41,8 +41,7 @@ function Promotions() {
     },
     {
       title: "Transparent Pricing",
-      description:
-        "Clear estimates before work begins — no surprises.",
+      description: "Clear estimates before work begins — no surprises.",
     },
     {
       title: "Warranty on Repairs",
@@ -59,7 +58,21 @@ function Promotions() {
             <a href="/" className="promotions-intro__breadcrumb-link">
               Home
             </a>
-            <span className="promotions-intro__breadcrumb-separator">›</span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 12L10 8L6 4"
+                stroke="#737373"
+                stroke-width="1.125"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>{" "}
             <span className="promotions-intro__breadcrumb-current">
               Promotions
             </span>
@@ -81,17 +94,13 @@ function Promotions() {
         <div className="container">
           {/* Featured promotions */}
           <div className="promotions-section__header">
-            <h2 className="promotions-section__heading">
-              Featured promotions
-            </h2>
+            <h2 className="promotions-section__heading">Featured promotions</h2>
           </div>
 
           <div className="promotions-section__grid">
             {promotions.map((item, index) => (
               <div key={index} className="promotions-section__card">
-                <h3 className="promotions-section__card-title">
-                  {item.title}
-                </h3>
+                <h3 className="promotions-section__card-title">{item.title}</h3>
                 <p className="promotions-section__card-description">
                   {item.description}
                 </p>
@@ -131,9 +140,7 @@ function Promotions() {
                   <div className="promotions-section__step-number">
                     {index + 1}
                   </div>
-                  <p className="promotions-section__step-text">
-                    {step}
-                  </p>
+                  <p className="promotions-section__step-text">{step}</p>
                 </div>
               ))}
             </div>

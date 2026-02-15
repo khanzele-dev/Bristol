@@ -11,6 +11,7 @@ import sanclemente from "../assets/locations/sanclemente.png";
 import costamesa from "../assets/locations/costamesa.png";
 import huntingtonbeach from "../assets/locations/huntingtonbeach.png";
 import "../styles/pages/locations.scss";
+import { NavLink } from "react-router-dom";
 
 function Locations() {
   const locations = [
@@ -59,7 +60,21 @@ function Locations() {
             <a href="/" className="locations-intro__breadcrumb-link">
               Home
             </a>
-            <span className="locations-intro__breadcrumb-separator">›</span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 12L10 8L6 4"
+                stroke="#737373"
+                stroke-width="1.125"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>{" "}
             <span className="locations-intro__breadcrumb-current">
               Locations
             </span>
@@ -81,7 +96,7 @@ function Locations() {
         <div className="container">
           <div className="locations-section__grid">
             {locations.map((location, index) => (
-              <div key={index} className="locations-section__card">
+              <NavLink to="#" key={index} className="locations-section__card">
                 <div className="locations-section__image-wrapper">
                   <img
                     src={location.image}
@@ -91,7 +106,7 @@ function Locations() {
                 </div>
 
                 <p className="locations-section__name">{location.name}</p>
-              </div>
+              </NavLink>
             ))}
           </div>
 

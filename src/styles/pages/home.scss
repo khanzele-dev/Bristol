@@ -125,15 +125,18 @@
 
   &__item {
     text-align: center;
-
+    text-decoration: none;
     img {
       max-height: 380px;
       height: auto;
     }
-
     p {
       font-size: 24px;
       font-weight: 500;
+      transition: all 0.1s ease;
+    }
+    &:hover p {
+      color: $color-secondary;
     }
   }
 }
@@ -168,12 +171,17 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 60px 80px;
+    gap: 20px;
     align-items: center;
     justify-items: center;
-
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 120px;
+    }
     img {
-      max-width: 220px;
+      max-width: 250px;
       width: 100%;
       height: auto;
       transition: all 0.3s ease;
@@ -303,7 +311,7 @@
     font-size: 16px;
     font-weight: 400;
     color: #666;
-    line-height: 24px;
+    line-height: $height-line;
     margin-top: 14px;
   }
 
@@ -323,7 +331,7 @@
     p {
       font-size: 16px;
       font-weight: 400;
-      line-height: 24px;
+      line-height: $height-line;
       max-width: 460px;
       color: $color-text-secondary;
       margin-top: 16px;
@@ -354,7 +362,7 @@
       list-style: none;
       font-size: 16px;
       font-weight: 500;
-      line-height: 24px;
+      line-height: $height-line;
       position: relative;
     }
 
@@ -394,8 +402,8 @@
       margin-top: 14px;
       font-size: 14px;
       font-weight: 400;
-      line-height: 24px;
-      color: #666;
+      line-height: $height-line;
+      color: $color-text-secondary;
     }
   }
   &__item:first-child {
@@ -455,7 +463,7 @@
     margin-top: 24px;
     font-size: 16px;
     color: $color-text-secondary;
-    line-height: 24px;
+    line-height: $height-line;
   }
 
   &__author {
@@ -465,7 +473,7 @@
     gap: 8px;
     font-size: 16px;
     font-weight: 500;
-    line-height: 24px;
+    line-height: $height-line;
   }
 
   &__photo {

@@ -15,6 +15,7 @@ import wolfImg from "../assets/brands/wolf.png";
 // import boschImg from "../assets/brands/bosch.png";
 // import kitchenaidImg from "../assets/brands/kitchenaid.png";
 import "../styles/pages/home.scss";
+import { NavLink } from "react-router-dom";
 
 const testimonials = [
   {
@@ -114,35 +115,35 @@ function Home() {
           </div>
 
           <div className="services-grid__items">
-            <div className="services-grid__item">
+            <NavLink to="#" className="services-grid__item">
               <img src={fridgeImg} alt="Refrigerators & Freezers" />
               <p>Refrigerators & Freezers</p>
-            </div>
+            </NavLink>
 
-            <div className="services-grid__item">
+            <NavLink to="#" className="services-grid__item">
               <img src={ovenImg} alt="Ovens & Ranges" />
               <p>Ovens & Ranges</p>
-            </div>
+            </NavLink>
 
-            <div className="services-grid__item">
+            <NavLink to="#" className="services-grid__item">
               <img src={dishwasherImg} alt="Dishwashers" />
               <p>Dishwashers</p>
-            </div>
+            </NavLink>
 
-            <div className="services-grid__item">
+            <NavLink to="#" className="services-grid__item">
               <img src={washerImg} alt="Washers" />
               <p>Washers</p>
-            </div>
+            </NavLink>
 
-            <div className="services-grid__item">
+            <NavLink to="#" className="services-grid__item">
               <img src={dryerImg} alt="Dryers" />
               <p>Dryers</p>
-            </div>
+            </NavLink>
 
-            <div className="services-grid__item">
+            <NavLink to="#" className="services-grid__item">
               <img src={coolerImg} alt="Beverage Coolers" />
               <p>Beverage Coolers</p>
-            </div>
+            </NavLink>
           </div>
         </div>
       </section>
@@ -158,14 +159,30 @@ function Home() {
           </div>
 
           <div className="brands__grid">
-            <img src={subzeroImg} alt="Sub-Zero" />
-            <img src={wolfImg} alt="Wolf" />
-            <img src={subzeroImg} alt="Sub-Zero" />
-            <img src={wolfImg} alt="Wolf" />
-            <img src={subzeroImg} alt="Sub-Zero" />
-            <img src={wolfImg} alt="Wolf" />
-            <img src={subzeroImg} alt="Sub-Zero" />
-            <img src={wolfImg} alt="Wolf" />
+            <div className="brands__item">
+              <img src={subzeroImg} alt="Sub-Zero" />
+            </div>
+            <div className="brands__item">
+              <img src={wolfImg} alt="Wolf" />
+            </div>
+            <div className="brands__item">
+              <img src={subzeroImg} alt="Sub-Zero" />
+            </div>
+            <div className="brands__item">
+              <img src={wolfImg} alt="Wolf" />
+            </div>
+            <div className="brands__item">
+              <img src={subzeroImg} alt="Sub-Zero" />
+            </div>
+            <div className="brands__item">
+              <img src={wolfImg} alt="Wolf" />
+            </div>
+            <div className="brands__item">
+              <img src={subzeroImg} alt="Sub-Zero" />
+            </div>
+            <div className="brands__item">
+              <img src={wolfImg} alt="Wolf" />
+            </div>
             {/* <img src={vikingImg} alt="Viking" />
             <img src={thermadorImg} alt="Thermador" />
             <img src={monogramImg} alt="Monogram" />

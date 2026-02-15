@@ -1,10 +1,8 @@
 @use "../variables.scss" as *;
 
-/* ================= INTRO ================= */
-
 .faq-intro {
   background-color: #f3f3f3;
-  padding: 60px 0;
+  padding: 40px 0 85px;
 
   &__breadcrumb {
     display: flex;
@@ -12,21 +10,17 @@
     gap: 10px;
     margin-bottom: 30px;
     font-size: 14px;
-    color: #737373;
+    color: $color-text-secondary;
   }
 
   &__breadcrumb-link {
-    color: #737373;
+    color: $color-text-secondary;
     text-decoration: none;
     transition: color 0.2s ease;
 
     &:hover {
       color: #171717;
     }
-  }
-
-  &__breadcrumb-separator {
-    color: #a3a3a3;
   }
 
   &__breadcrumb-current {
@@ -41,13 +35,16 @@
   &__title {
     font-size: 42px;
     font-weight: 600;
-    margin-bottom: 20px;
-    color: #171717;
+    color: $color-text;
+    letter-spacing: 0.5%;
+    margin-top: 25px;
   }
 
   &__description {
+    margin-top: 10px;
     font-size: 18px;
-    line-height: 28px;
+    font-weight: 400;
+    line-height: 32px;
     color: #525252;
   }
 }
@@ -56,9 +53,7 @@
 
 .faq-section {
   background: $color-text-white;
-  padding: 60px 0;
-
-  /* GRID */
+  padding: 50px 0 70px;
 
   &__grid {
     display: grid;
@@ -76,111 +71,138 @@
     width: 100%;
   }
 
-  /* CTA */
-
   &__cta {
     width: 100%;
     border: 1px solid #e5e5e5;
     border-radius: 14px;
-    padding: 28px;
+    padding: 20px;
     background: $color-text-white;
   }
 
   &__cta-title {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #171717;
+    font-size: 24px;
+    font-weight: 500;
   }
 
   &__cta-description {
-    font-size: 15px;
+    margin-top: 14px;
+    font-size: 16px;
+    font-weight: 400;
     color: $color-secondary;
-    margin-bottom: 20px;
-    line-height: 22px;
+    line-height: $height-line;
   }
 
   &__cta-actions {
     display: flex;
-    gap: 12px;
+    margin-top: 16px;
+    gap: 8px;
+    & a {
+      padding: 0 25px;
+      height: 40px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 400;
+    }
   }
-
-  /* FAQ ITEMS */
 
   &__item {
-    display: block;
+    background: #17171708;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 16px 20px;
     width: 100%;
-    background: #f7f7f7;
-    border-radius: 14px;
-    padding: 22px 26px;
-    margin-bottom: 16px;
-  }
 
-  &__question {
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    list-style: none;
-    position: relative;
-    padding-right: 28px;
-  }
+    summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      list-style: none;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: $height-line;
+      position: relative;
+    }
 
-  &__question::-webkit-details-marker {
-    display: none;
-  }
+    summary::-webkit-details-marker {
+      display: none;
+    }
 
-  &__question::after {
-    content: "↓";
-    position: absolute;
-    right: 0;
-    transition: transform 0.3s ease;
-  }
+    .faq__icon {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      background: #1212121a;
+      border-radius: 8px;
+      width: 28px;
+      height: 28px;
+    }
+    .faq__icon svg {
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
 
-  &__item[open] .faq-section__question::after {
-    transform: rotate(180deg);
-  }
+    &[open] .faq__icon {
+      background: $color-text;
+      svg {
+        transform: rotate(180deg);
+        path {
+          stroke: $color-text-white;
+        }
+      }
+    }
 
-  &__answer {
-    margin-top: 14px;
-    font-size: 14px;
-    color: #666;
-    line-height: 22px;
+    p {
+      margin-top: 14px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: $height-line;
+      color: $color-text-secondary;
+    }
+  }
+  &__item:first-child {
+    margin: 0;
   }
 
   /* FEATURES */
 
   &__features {
+    margin-top: 70px;
     width: 100%;
-    margin-top: 40px;
   }
 
   &__features-title {
     font-size: 30px;
     font-weight: 600;
-    margin-bottom: 40px;
-    color: #171717;
   }
 
   &__features-grid {
+    margin-top: 32px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: 32px;
   }
 
   &__feature {
-    width: 100%;
+    max-width: 280px;
   }
 
   &__feature-title {
     font-size: 20px;
     font-weight: 500;
-    margin-bottom: 10px;
     color: #171717;
   }
 
   &__feature-description {
     font-size: 16px;
-    line-height: 22px;
-    color: $color-secondary
+    margin-top: 12px;
+    line-height: 25px;
+    font-weight: 400;
+    color: $color-text-secondary;
   }
 }

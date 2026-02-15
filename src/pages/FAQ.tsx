@@ -59,7 +59,21 @@ function FAQ() {
             <a href="/" className="faq-intro__breadcrumb-link">
               Home
             </a>
-            <span className="faq-intro__breadcrumb-separator">›</span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 12L10 8L6 4"
+                stroke="#737373"
+                stroke-width="1.125"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>{" "}
             <span className="faq-intro__breadcrumb-current">FAQ</span>
           </nav>
 
@@ -78,7 +92,6 @@ function FAQ() {
       <section className="faq-section">
         <div className="container">
           <div className="faq-section__grid">
-            {/* LEFT COLUMN */}
             <div className="faq-section__left">
               <div className="faq-section__cta">
                 <h3 className="faq-section__cta-title">
@@ -101,14 +114,37 @@ function FAQ() {
               </div>
             </div>
 
-            {/* RIGHT COLUMN */}
             <div className="faq-section__right">
-              {questions.map((item, index) => (
-                <details key={index} className="faq-section__item">
-                  <summary className="faq-section__question">
-                    {item.question}
+              {questions.map((el, i) => (
+                <details open={i == 0 ? true : false} className="faq__item">
+                  <summary>
+                    <span>{el.question}</span>
+                    <div className="faq__icon">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 3.3335V12.6668"
+                          stroke="#444444"
+                          strokeWidth="1.75"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M12.6666 8L7.99992 12.6667L3.33325 8"
+                          stroke="#444444"
+                          strokeWidth="1.75"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
                   </summary>
-                  <p className="faq-section__answer">{item.answer}</p>
+                  <p>{el.answer}</p>
                 </details>
               ))}
             </div>

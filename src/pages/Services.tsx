@@ -6,6 +6,7 @@ import dishwasherImg from "../assets/services/dishwasherImg.png";
 import washerImg from "../assets/services/washerImg.png";
 import dryerImg from "../assets/services/dryerImg.png";
 import coolerImg from "../assets/services/coolerImg.png";
+import { NavLink } from "react-router-dom";
 
 const services = [
   {
@@ -65,7 +66,21 @@ function Services() {
             <a href="/" className="services-intro__breadcrumb-link">
               Home
             </a>
-            <span className="services-intro__breadcrumb-separator">›</span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 12L10 8L6 4"
+                stroke="#737373"
+                stroke-width="1.125"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
             <span className="services-intro__breadcrumb-current">Services</span>
           </nav>
 
@@ -84,17 +99,14 @@ function Services() {
         <div className="container">
           <div className="services-section__grid">
             {services.map((service, index) => (
-              <div key={index} className="services-section__item">
-                <div className="services-section__image-wrapper">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="services-section__image"
-                  />
-                </div>
-
+              <NavLink to="#" key={index} className="services-section__item">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="services-section__image"
+                />
                 <p className="services-section__label">{service.title}</p>
-              </div>
+              </NavLink>
             ))}
           </div>
 
