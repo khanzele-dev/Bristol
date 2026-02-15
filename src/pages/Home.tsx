@@ -291,8 +291,8 @@ function Services() {
           <div className="testimonials__grid">
             {testimonials.map((item, index) => (
               <div className="testimonials__card" key={index}>
-                <div className="testimonials__stars">
-                  {Array.from({ length: item.rating }).map((e, i) => (
+                <div className="testimonials__stars">           
+                  {Array.from({ length: item.rating }).map((_e, i) => (
                     <svg
                       width="24"
                       height="24"
