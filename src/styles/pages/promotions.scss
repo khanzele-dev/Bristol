@@ -1,0 +1,199 @@
+@use "../variables.scss" as *;
+
+.promotions-intro {
+  background-color: #f3f3f3;
+  padding: 60px 0 80px;
+
+  &__breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #737373;
+  }
+
+  &__breadcrumb-link {
+    color: #737373;
+    text-decoration: none;
+    transition: 0.2s ease;
+
+    &:hover {
+      color: #171717;
+    }
+  }
+
+  &__breadcrumb-separator {
+    color: #a3a3a3;
+  }
+
+  &__breadcrumb-current {
+    color: #171717;
+    font-weight: 500;
+  }
+
+  &__content {
+    max-width: 720px;
+  }
+
+  &__title {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #171717;
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 28px;
+    color: #525252;
+  }
+}
+
+.promotions-section {
+  background: $color-text-inverse;
+  padding: 60px 0 80px;
+
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__heading {
+    font-size: 30px;
+    font-weight: 600;
+    color: #171717;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: $color-primary;
+  }
+
+  &__card-description {
+    font-size: 14px;
+    color: #666;
+  }
+
+  &__banner {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    border-radius: 18px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-bottom: 45px;
+  }
+
+  &__banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+  }
+
+  &__banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding: 0 0 40px 40px;
+  }
+  
+  &__banner-content button {
+    font-size: 20px;
+    padding: 35px;
+  }
+
+  &__banner-title {
+    font-size: 54px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 30px;
+  }
+
+  /* Steps */
+
+  &__steps {
+    margin-bottom: 40px;
+  }
+
+  &__steps-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #171717;
+  }
+
+  &__steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  &__step {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__step-number {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  &__step-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #666;
+  }
+
+  /* Features */
+
+  &__features-title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #171717;
+  }
+
+  &__features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  &__feature-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &__feature-description {
+    font-size: 16px;
+    color: #666;
+  }
+}
