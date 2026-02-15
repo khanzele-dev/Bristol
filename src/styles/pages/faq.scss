@@ -55,7 +55,7 @@
 /* ================= MAIN SECTION ================= */
 
 .faq-section {
-  background: $color-text-inverse;
+  background: $color-text-white;
   padding: 60px 0;
 
   /* GRID */
@@ -83,7 +83,7 @@
     border: 1px solid #e5e5e5;
     border-radius: 14px;
     padding: 28px;
-    background: $color-text-inverse;
+    background: $color-text-white;
   }
 
   &__cta-title {
@@ -95,7 +95,7 @@
 
   &__cta-description {
     font-size: 15px;
-    color: #666;
+    color: $color-secondary;
     margin-bottom: 20px;
     line-height: 22px;
   }
@@ -181,6 +181,6 @@
   &__feature-description {
     font-size: 16px;
     line-height: 22px;
-    color: #666;
+    color: $color-secondary
   }
 }

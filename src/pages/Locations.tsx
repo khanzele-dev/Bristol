@@ -109,8 +109,12 @@ function Locations() {
               </div>
 
               <div className="locations-section__cta-actions">
-                <button className="btn btn--outline">Schedule Service</button>
-                <button className="btn btn--primary">Call now</button>
+                <a href="#" className="btn btn--outline">
+                  Schedule Service
+                </a>
+                <a href="tel:9499920637" className="btn btn--primary">
+                  Call now
+                </a>
               </div>
             </div>
           </div>

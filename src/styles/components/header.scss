@@ -10,7 +10,7 @@
   position: fixed;
   z-index: 1000;
   width: 100%;
-  background: $color-text-inverse;
+  background: $color-text-white;
 
   &__container {
     display: flex;
@@ -64,7 +64,7 @@
   &__actions {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
   }
 }
 
@@ -72,10 +72,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 44px;
+  height: 48px;
   padding: 0 22px;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -91,6 +91,15 @@
 
   &--primary {
     background: $color-primary;
-    color: #ffffff;
+    color: $color-text-white;
+  }
+
+  &--primary:hover {
+    background: #2f70ff
+  }
+
+  &--outline:hover {
+    background: #155DFC;
+    color: #fff
   }
 }

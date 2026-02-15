@@ -6,15 +6,14 @@ import dishwasherImg from "../assets/services/dishwasherImg.png";
 import washerImg from "../assets/services/washerImg.png";
 import dryerImg from "../assets/services/dryerImg.png";
 import coolerImg from "../assets/services/coolerImg.png";
-// import subzeroImg from "../assets/brands/subzero.png";
-// import wolfImg from "../assets/brands/wolf.png";
+import subzeroImg from "../assets/brands/subzero.png";
+import wolfImg from "../assets/brands/wolf.png";
 // import vikingImg from "../assets/brands/viking.png";
 // import thermadorImg from "../assets/brands/thermador.png";
 // import monogramImg from "../assets/brands/monogram.png";
 // import mieleImg from "../assets/brands/miele.png";
 // import boschImg from "../assets/brands/bosch.png";
 // import kitchenaidImg from "../assets/brands/kitchenaid.png";
-import { NavLink } from "react-router-dom";
 import "../styles/pages/home.scss";
 
 const testimonials = [
@@ -63,7 +62,7 @@ const questions = [
   },
 ];
 
-function Services() {
+function Home() {
   return (
     <>
       <section className="hero" style={{ backgroundImage: `url(${heroImg})` }}>
@@ -147,7 +146,7 @@ function Services() {
           </div>
         </div>
       </section>
-      {/* <section className="brands">
+      <section className="brands">
         <div className="container">
           <div className="brands__header">
             <h2 className="brands__title">Premium Brands We Service</h2>
@@ -161,15 +160,21 @@ function Services() {
           <div className="brands__grid">
             <img src={subzeroImg} alt="Sub-Zero" />
             <img src={wolfImg} alt="Wolf" />
-            <img src={vikingImg} alt="Viking" />
+            <img src={subzeroImg} alt="Sub-Zero" />
+            <img src={wolfImg} alt="Wolf" />
+            <img src={subzeroImg} alt="Sub-Zero" />
+            <img src={wolfImg} alt="Wolf" />
+            <img src={subzeroImg} alt="Sub-Zero" />
+            <img src={wolfImg} alt="Wolf" />
+            {/* <img src={vikingImg} alt="Viking" />
             <img src={thermadorImg} alt="Thermador" />
             <img src={monogramImg} alt="Monogram" />
             <img src={mieleImg} alt="Miele" />
             <img src={boschImg} alt="Bosch" />
-            <img src={kitchenaidImg} alt="KitchenAid" />
+            <img src={kitchenaidImg} alt="KitchenAid" /> */}
           </div>
         </div>
-      </section> */}
+      </section>
       <section
         className="trust-hero"
         style={{ backgroundImage: `url(${trustHeroImg})` }}
@@ -203,7 +208,7 @@ function Services() {
         <div className="container faq__grid">
           <div className="faq__left">
             <div className="faq__top">
-              <NavLink to="/faq" className="faq__btn">
+              <button className="faq__btn">
                 <svg
                   width="18"
                   height="18"
@@ -241,7 +246,7 @@ function Services() {
                   </defs>
                 </svg>
                 <p>view all questions</p>
-              </NavLink>
+              </button>
               <h2 className="faq__title">Frequently Asked Questions</h2>
 
               <p className="faq__subtitle">
@@ -269,9 +274,35 @@ function Services() {
           </div>
 
           <div className="faq__right">
-            {questions.map((el) => (
-              <details className="faq__item">
-                <summary>{el.question}</summary>
+            {questions.map((el, i) => (
+              <details open={i == 0 ? true : false} className="faq__item">
+                <summary>
+                  <span>{el.question}</span>
+                  <div className="faq__icon">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 3.3335V12.6668"
+                        stroke="#444444"
+                        strokeWidth="1.75"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M12.6666 8L7.99992 12.6667L3.33325 8"
+                        stroke="#444444"
+                        strokeWidth="1.75"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </summary>
                 <p>{el.answer}</p>
               </details>
             ))}
@@ -291,7 +322,7 @@ function Services() {
           <div className="testimonials__grid">
             {testimonials.map((item, index) => (
               <div className="testimonials__card" key={index}>
-                <div className="testimonials__stars">           
+                <div className="testimonials__stars">
                   {Array.from({ length: item.rating }).map((_e, i) => (
                     <svg
                       width="24"
@@ -401,4 +432,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default Home;

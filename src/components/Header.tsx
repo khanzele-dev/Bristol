@@ -131,7 +131,7 @@ function Header() {
         </nav>
 
         <div className="header__actions">
-          <button className="btn btn--outline">Schedule service</button>
+          <a className="btn btn--outline">Schedule service</a>
           <a href="tel:9499920637" className="btn btn--primary">
             (949) 992-0637
           </a>
