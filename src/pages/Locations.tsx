@@ -134,20 +134,24 @@ function Locations() {
             </div>
           </div>
           <div className="locations-section__features">
-            <h2 className="locations-section__features-title">Why Choose Us</h2>
+            <div className="container">
+              <h2 className="locations-section__features-title">
+                Why Choose Us
+              </h2>
 
-            <div className="locations-section__features-grid">
-              {features.map((feature, index) => (
-                <div key={index} className="locations-section__feature">
-                  <h3 className="locations-section__feature-title">
-                    {feature.title}
-                  </h3>
+              <div className="locations-section__features-grid">
+                {features.map((feature, index) => (
+                  <div key={index} className="locations-section__feature">
+                    <h3 className="locations-section__feature-title">
+                      {feature.title}
+                    </h3>
 
-                  <p className="locations-section__feature-description">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
+                    <p className="locations-section__feature-description">
+                      {feature.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
