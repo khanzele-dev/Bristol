@@ -1,0 +1,188 @@
+@use "../variables.scss" as *;
+
+.contact {
+  background: transparent;
+  padding: 50px 0 90px;
+
+  &__container {
+    width: 100%;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    position: relative;
+    padding-left: 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $color-primary;
+    }
+  }
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 99px;
+    letter-spacing: -2px;
+    margin-top: 30px;
+  }
+
+  &__title-main {
+    display: block;
+    color: $color-text-secondary;
+  }
+
+  &__title-sub {
+    display: block;
+    color: $color-text-secondary;
+  }
+
+  &__description {
+    font-size: 24px;
+    color: $color-text-secondary;
+    margin-top: 24px;
+    line-height: 36px;
+    font-weight: 400;
+    max-width: 420px;
+  }
+
+  &__grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 30px;
+  }
+
+  &__info {
+    background: $color-primary;
+    border-radius: 14px;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__info-title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 32px;
+    color: $color-text-white;
+  }
+
+  &__info-text {
+    font-size: 18px;
+    font-weight: 400;
+    color: $color-text-primary;
+    line-height: 30px;
+    margin-top: 20px;
+  }
+
+  &__details {
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+
+  &__detail {
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: 2px;
+    span {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: $height-line;
+      color: $color-text-primary;
+    }
+
+    a,
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: $height-line;
+      text-decoration: none;
+      color: $color-text-white;
+    }
+
+    a:hover {
+      opacity: 0.85;
+    }
+  }
+
+  &__backbtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 2px;
+    margin-top: 30px;
+  }
+
+  &__back {
+    font-size: 13px;
+    color: #e5e5e5;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__form-wrapper {
+    background: $color-page-header;
+    border-radius: 14px;
+    padding: 35px 30px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    button {
+      width: 180px;
+      display: inline-flex;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+  &__field {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    label {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+    input {
+      border: 1px solid #cbd5e1;
+      outline: none;
+      border-radius: 6px;
+      padding: 8px 12px;
+    }
+    textarea {
+      border: 1px solid #cbd5e1;
+      outline: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      resize: none;
+    }
+  }
+}
