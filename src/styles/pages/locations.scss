@@ -1,53 +1,6 @@
 @use "../variables.scss" as *;
-
-.locations-intro {
-  background-color: #f3f3f3;
-  padding: 40px 0 85px;
-
-  &__breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 30px;
-    font-size: 14px;
-    color: $color-text-secondary;
-  }
-
-  &__breadcrumb-link {
-    color: $color-text-secondary;
-    text-decoration: none;
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: #171717;
-    }
-  }
-
-  &__breadcrumb-current {
-    color: #171717;
-    font-weight: 500;
-  }
-
-  &__content {
-    max-width: 720px;
-  }
-
-  &__title {
-    font-size: 42px;
-    font-weight: 600;
-    color: $color-text;
-    letter-spacing: 0.5%;
-    margin-top: 25px;
-  }
-
-  &__description {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 32px;
-    color: #525252;
-  }
-}
+@import "../components/intro";
+@import "../components/features";
 
 .locations-section {
   background: $color-text-white;
@@ -133,40 +86,64 @@
       font-weight: 400;
     }
   }
-}
-.locations-section {
-  &__features {
-    margin-top: 70px;
-    width: 100%;
+
+  @media (max-width: 992px) {
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
   }
 
-  &__features-title {
-    font-size: 30px;
-    font-weight: 600;
+  @media (max-width: 768px) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    &__cta-content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
   }
 
-  &__features-grid {
-    margin-top: 32px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 32px;
+  @media (max-width: 480px) {
+    padding: 30px 0 40px;
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px 18px;
+    }
+
+    &__name {
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    &__cta {
+      padding: 20px 26px;
+      margin-top: 40px;
+    }
+
+    &__cta-title {
+      font-size: 20px;
+    }
+
+    &__cta-description {
+      margin-top: 12px;
+      font-size: 14px;
+      line-height: 23px;
+    }
+
+    &__cta-actions {
+      gap: 8px;
+    }
   }
 
-  &__feature {
-    max-width: 280px;
-  }
-
-  &__feature-title {
-    font-size: 20px;
-    font-weight: 500;
-    color: #171717;
-  }
-
-  &__feature-description {
-    font-size: 16px;
-    margin-top: 12px;
-    line-height: 25px;
-    font-weight: 400;
-    color: $color-text-secondary;
+  @media (max-width: 360px) {
+    &__text {
+      font-size: 15px;
+    }
   }
 }

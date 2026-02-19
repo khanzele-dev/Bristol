@@ -186,3 +186,41 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .contact {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__title {
+      font-size: 56px;
+      line-height: 64px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 20px 0 40px;
+
+    &__title {
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    &__description {
+      display: none;
+    }
+
+    &__grid {
+      margin-top: 36px;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    &__details {
+      margin-top: 36px;
+    }
+  }
+}

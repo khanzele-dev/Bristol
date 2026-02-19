@@ -221,65 +221,64 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="faq">
-        <div className="container faq__grid">
-          <div className="faq__left">
-            <div className="faq__top">
-              <button className="faq__btn">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 18 18"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_17_586)">
-                    <path
-                      d="M2.24401 12.2565C2.35429 12.5347 2.37884 12.8395 2.31451 13.1318L1.51576 15.5993C1.49003 15.7244 1.49668 15.854 1.53509 15.9759C1.57351 16.0977 1.64241 16.2077 1.73526 16.2955C1.82812 16.3832 1.94184 16.4458 2.06566 16.4773C2.18948 16.5087 2.31928 16.508 2.44276 16.4753L5.00251 15.7268C5.2783 15.6721 5.56391 15.696 5.82676 15.7958C7.4283 16.5437 9.24254 16.7019 10.9494 16.2426C12.6562 15.7832 14.146 14.7358 15.1558 13.285C16.1656 11.8343 16.6306 10.0736 16.4687 8.31343C16.3069 6.55328 15.5285 4.90687 14.2711 3.66466C13.0136 2.42246 11.3578 1.66429 9.5958 1.52394C7.83381 1.38358 6.07886 1.87005 4.64059 2.89752C3.20232 3.92499 2.17316 5.42742 1.73468 7.13974C1.2962 8.85206 1.47659 10.6642 2.24401 12.2565Z"
-                      stroke="#121212"
-                      strokeWidth="1.75"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M6.8175 6.74994C6.99383 6.24869 7.34187 5.82602 7.79997 5.55679C8.25807 5.28756 8.79668 5.18914 9.32039 5.27897C9.8441 5.3688 10.3191 5.64108 10.6613 6.04758C11.0035 6.45409 11.1908 6.96858 11.19 7.49994C11.19 8.99994 8.94 9.74994 8.94 9.74994"
-                      stroke="#121212"
-                      strokeWidth="1.75"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M9 12.75H9.0075"
-                      stroke="#121212"
-                      strokeWidth="1.75"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_17_586">
-                      <rect width="18" height="18" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                <p>view all questions</p>
-              </button>
-              <h2 className="faq__title">Frequently Asked Questions</h2>
+      <section className="faq-section">
+        <div className="container faq-section__grid">
+          <div className="faq-section__top">
+            <button className="faq-section__btn">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_17_586)">
+                  <path
+                    d="M2.24401 12.2565C2.35429 12.5347 2.37884 12.8395 2.31451 13.1318L1.51576 15.5993C1.49003 15.7244 1.49668 15.854 1.53509 15.9759C1.57351 16.0977 1.64241 16.2077 1.73526 16.2955C1.82812 16.3832 1.94184 16.4458 2.06566 16.4773C2.18948 16.5087 2.31928 16.508 2.44276 16.4753L5.00251 15.7268C5.2783 15.6721 5.56391 15.696 5.82676 15.7958C7.4283 16.5437 9.24254 16.7019 10.9494 16.2426C12.6562 15.7832 14.146 14.7358 15.1558 13.285C16.1656 11.8343 16.6306 10.0736 16.4687 8.31343C16.3069 6.55328 15.5285 4.90687 14.2711 3.66466C13.0136 2.42246 11.3578 1.66429 9.5958 1.52394C7.83381 1.38358 6.07886 1.87005 4.64059 2.89752C3.20232 3.92499 2.17316 5.42742 1.73468 7.13974C1.2962 8.85206 1.47659 10.6642 2.24401 12.2565Z"
+                    stroke="#121212"
+                    strokeWidth="1.75"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M6.8175 6.74994C6.99383 6.24869 7.34187 5.82602 7.79997 5.55679C8.25807 5.28756 8.79668 5.18914 9.32039 5.27897C9.8441 5.3688 10.3191 5.64108 10.6613 6.04758C11.0035 6.45409 11.1908 6.96858 11.19 7.49994C11.19 8.99994 8.94 9.74994 8.94 9.74994"
+                    stroke="#121212"
+                    strokeWidth="1.75"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M9 12.75H9.0075"
+                    stroke="#121212"
+                    strokeWidth="1.75"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_17_586">
+                    <rect width="18" height="18" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <p>view all questions</p>
+            </button>
+            <h2 className="faq-section__title">Frequently Asked Questions</h2>
 
-              <p className="faq__subtitle">
-                Clear answers to the most common questions about our appliance
-                repair services
-              </p>
-            </div>
-
-            <div className="faq__cta">
+            <p className="faq-section__subtitle">
+              Clear answers to the most common questions about our appliance
+              repair services
+            </p>
+          </div>
+          <div className="faq-section__bottom">
+            <div className="faq-section__cta">
               <h3>Still have questions?</h3>
               <p>
                 Call us or schedule your service – our team is ready to help you
                 today
               </p>
 
-              <div className="faq__buttons">
+              <div className="faq-section__buttons">
                 <a href="tel:9499920637" className="btn btn--primary">
                   Call now
                 </a>
@@ -290,12 +289,15 @@ function Home() {
             </div>
           </div>
 
-          <div className="faq__right">
+          <div className="faq-section__right">
             {questions.map((el, i) => (
-              <details open={i == 0 ? true : false} className="faq__item">
+              <details
+                open={i == 0 ? true : false}
+                className="faq-section__item"
+              >
                 <summary>
                   <span>{el.question}</span>
-                  <div className="faq__icon">
+                  <div className="faq-section__icon">
                     <svg
                       width="16"
                       height="16"
@@ -326,20 +328,20 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="testimonials">
+      <section className="reviews-section">
         <div className="container">
-          <div className="testimonials__header">
-            <h2 className="testimonials__title">What Our Customers Say</h2>
-            <p className="testimonials__subtitle">
+          <div className="reviews-section__header">
+            <h2 className="reviews-section__title">What Our Customers Say</h2>
+            <p className="reviews-section__subtitle">
               Real feedback from homeowners who trust us with their appliances —
               quality service, honest pricing, and reliable results
             </p>
           </div>
 
-          <div className="testimonials__grid">
+          <div className="reviews-section__grid">
             {testimonials.map((item, index) => (
-              <div className="testimonials__card" key={index}>
-                <div className="testimonials__stars">
+              <div className="reviews-section__card" key={index}>
+                <div className="reviews-section__stars">
                   {Array.from({ length: item.rating }).map((_e, i) => (
                     <svg
                       width="24"
@@ -360,9 +362,9 @@ function Home() {
                     </svg>
                   ))}
                 </div>
-                <p className="testimonials__text">{item.text}</p>
-                <div className="testimonials__author">
-                  <div className="testimonials__photo">
+                <p className="reviews-section__text">{item.text}</p>
+                <div className="reviews-section__author">
+                  <div className="reviews-section__photo">
                     <svg
                       width="24"
                       height="24"
@@ -386,15 +388,15 @@ function Home() {
                       />
                     </svg>
                   </div>
-                  <div className="testimonials__avatar" />
+                  <div className="reviews-section__avatar" />
                   <span>{item.name}</span>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="testimonials__nav">
-            <button className="testimonials__arrow">
+          <div className="reviews-section__nav">
+            <button className="reviews-section__arrow">
               <svg
                 width="16"
                 height="16"
@@ -418,7 +420,7 @@ function Home() {
                 />
               </svg>
             </button>
-            <button className="testimonials__arrow testimonials__arrow--active">
+            <button className="reviews-section__arrow reviews-section__arrow--active">
               <svg
                 width="16"
                 height="16"

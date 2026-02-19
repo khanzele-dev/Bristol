@@ -157,7 +157,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div style={{ border: "1px solid #333", width: "100%" }}></div>
+        <div className='footer__border' style={{ border: "1px solid #333", width: "100%" }}></div>
         <div className="footer__columns">
           <div className="footer__column">
             <h4>Services</h4>

@@ -1,0 +1,102 @@
+@use "../variables.scss" as *;
+
+.intro-section {
+  background-color: #f3f3f3;
+  padding: 40px 0 85px;
+
+  &__breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: $color-text-secondary;
+  }
+
+  &__breadcrumb-link {
+    color: $color-text-secondary;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #171717;
+    }
+  }
+
+  &__breadcrumb-current {
+    color: #171717;
+    font-weight: 500;
+  }
+
+  &__content {
+    max-width: 740px;
+  }
+
+  &__title {
+    font-size: 42px;
+    font-weight: 600;
+    color: $color-text;
+    letter-spacing: 0.5%;
+    margin-top: 25px;
+  }
+
+  &__description {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #525252;
+  }
+
+  @media (max-width: 992px) {
+    padding: 35px 0 65px;
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__title {
+      font-size: 36px;
+    }
+
+    &__description {
+      font-size: 17px;
+      line-height: 28px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 0 50px;
+
+    &__title {
+      font-size: 30px;
+      margin-top: 18px;
+    }
+
+    &__description {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 30px 0;
+
+    &__breadcrumb {
+      gap: 8px;
+      line-height: 21px;
+    }
+
+    &__title {
+      font-size: 24px;
+      font-weight: 500;
+      margin-top: 12px;
+    }
+
+    &__description {
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 23px;
+    }
+  }
+}

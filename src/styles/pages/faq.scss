@@ -1,57 +1,8 @@
 @use "../variables.scss" as *;
+@import "../components/intro";
+@import "../components/features";
 
-.faq-intro {
-  background-color: #f3f3f3;
-  padding: 40px 0 85px;
-
-  &__breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 30px;
-    font-size: 14px;
-    color: $color-text-secondary;
-  }
-
-  &__breadcrumb-link {
-    color: $color-text-secondary;
-    text-decoration: none;
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: #171717;
-    }
-  }
-
-  &__breadcrumb-current {
-    color: #171717;
-    font-weight: 500;
-  }
-
-  &__content {
-    max-width: 720px;
-  }
-
-  &__title {
-    font-size: 42px;
-    font-weight: 600;
-    color: $color-text;
-    letter-spacing: 0.5%;
-    margin-top: 25px;
-  }
-
-  &__description {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 32px;
-    color: #525252;
-  }
-}
-
-/* ================= MAIN SECTION ================= */
-
-.faq-section {
+.faq-main {
   background: $color-text-white;
   padding: 50px 0 70px;
 
@@ -65,10 +16,12 @@
 
   &__left {
     width: 100%;
+    min-width: 0;
   }
 
   &__right {
     width: 100%;
+    min-width: 0;
   }
 
   &__cta {
@@ -77,6 +30,7 @@
     border-radius: 14px;
     padding: 20px;
     background: $color-text-white;
+    box-sizing: border-box;
   }
 
   &__cta-title {
@@ -96,13 +50,19 @@
     display: flex;
     margin-top: 16px;
     gap: 8px;
-    & a {
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 0 25px;
       height: 40px;
       transition: all 0.2s ease;
       cursor: pointer;
       font-size: 13px;
       font-weight: 400;
+      white-space: nowrap;
+      box-sizing: border-box;
     }
   }
 
@@ -112,21 +72,22 @@
     margin-top: 20px;
     padding: 16px 20px;
     width: 100%;
+    box-sizing: border-box;
 
     summary {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 12px;
       cursor: pointer;
       list-style: none;
       font-size: 16px;
       font-weight: 500;
       line-height: $height-line;
-      position: relative;
-    }
 
-    summary::-webkit-details-marker {
-      display: none;
+      &::-webkit-details-marker {
+        display: none;
+      }
     }
 
     .faq__icon {
@@ -135,22 +96,24 @@
       align-content: center;
       align-items: center;
       flex-shrink: 0;
+      min-width: 28px;
       background: #1212121a;
       border-radius: 8px;
       width: 28px;
       height: 28px;
-    }
-    .faq__icon svg {
-      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    summary::-webkit-details-marker {
-      display: none;
+
+      svg {
+        display: block;
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      }
     }
 
     &[open] .faq__icon {
       background: $color-text;
+
       svg {
         transform: rotate(180deg);
+
         path {
           stroke: $color-text-white;
         }
@@ -164,45 +127,9 @@
       line-height: $height-line;
       color: $color-text-secondary;
     }
-  }
-  &__item:first-child {
-    margin: 0;
-  }
 
-  /* FEATURES */
-
-  &__features {
-    margin-top: 70px;
-    width: 100%;
-  }
-
-  &__features-title {
-    font-size: 30px;
-    font-weight: 600;
-  }
-
-  &__features-grid {
-    margin-top: 32px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 32px;
-  }
-
-  &__feature {
-    max-width: 280px;
-  }
-
-  &__feature-title {
-    font-size: 20px;
-    font-weight: 500;
-    color: #171717;
-  }
-
-  &__feature-description {
-    font-size: 16px;
-    margin-top: 12px;
-    line-height: 25px;
-    font-weight: 400;
-    color: $color-text-secondary;
+    &:first-child {
+      margin: 0;
+    }
   }
 }

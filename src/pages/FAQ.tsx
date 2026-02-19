@@ -53,10 +53,10 @@ const features = [
 function FAQ() {
   return (
     <>
-      <section className="faq-intro">
+      <section className="intro-section">
         <div className="container">
-          <nav className="faq-intro__breadcrumb">
-            <a href="/" className="faq-intro__breadcrumb-link">
+          <nav className="intro-section__breadcrumb">
+            <a href="/" className="intro-section__breadcrumb-link">
               Home
             </a>
             <svg
@@ -74,13 +74,13 @@ function FAQ() {
                 stroke-linejoin="round"
               />
             </svg>{" "}
-            <span className="faq-intro__breadcrumb-current">FAQ</span>
+            <span className="intro-section__breadcrumb-current">FAQ</span>
           </nav>
 
-          <div className="faq-intro__content">
-            <h1 className="faq-intro__title">Frequently Asked Questions</h1>
+          <div className="intro-section__content">
+            <h1 className="intro-section__title">Frequently Asked Questions</h1>
 
-            <p className="faq-intro__description">
+            <p className="intro-section__description">
               Our technicians serve homeowners across Orange County with fast
               response times, transparent pricing, and expert repair of high-end
               and built-in appliances
@@ -89,21 +89,19 @@ function FAQ() {
         </div>
       </section>
 
-      <section className="faq-section">
+      <section className="faq-main">
         <div className="container">
-          <div className="faq-section__grid">
-            <div className="faq-section__left">
-              <div className="faq-section__cta">
-                <h3 className="faq-section__cta-title">
-                  Still have questions?
-                </h3>
+          <div className="faq-main__grid">
+            <div className="faq-main__left">
+              <div className="faq-main__cta">
+                <h3 className="faq-main__cta-title">Still have questions?</h3>
 
-                <p className="faq-section__cta-description">
+                <p className="faq-main__cta-description">
                   Call us or schedule your service – our team is ready to help
                   you today
                 </p>
 
-                <div className="faq-section__cta-actions">
+                <div className="faq-main__cta-actions">
                   <a href="#" className="btn btn--outline">
                     Schedule Service
                   </a>
@@ -114,9 +112,12 @@ function FAQ() {
               </div>
             </div>
 
-            <div className="faq-section__right">
+            <div className="faq-main__right">
               {questions.map((el, i) => (
-                <details open={i == 0 ? true : false} className="faq__item">
+                <details
+                  open={i == 0 ? true : false}
+                  className="faq-main__item"
+                >
                   <summary>
                     <span>{el.question}</span>
                     <div className="faq__icon">
@@ -150,18 +151,17 @@ function FAQ() {
             </div>
           </div>
 
-          {/* FEATURES */}
-          <div className="faq-section__features">
-            <h2 className="faq-section__features-title">Why Choose Us</h2>
+          <div className="features-section__features">
+            <h2 className="features-section__features-title">Why Choose Us</h2>
 
-            <div className="faq-section__features-grid">
+            <div className="features-section__features-grid">
               {features.map((feature, index) => (
-                <div key={index} className="faq-section__feature">
-                  <h3 className="faq-section__feature-title">
+                <div key={index} className="features-section__feature">
+                  <h3 className="features-section__feature-title">
                     {feature.title}
                   </h3>
 
-                  <p className="faq-section__feature-description">
+                  <p className="features-section__feature-description">
                     {feature.description}
                   </p>
                 </div>

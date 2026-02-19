@@ -54,10 +54,10 @@ function Locations() {
 
   return (
     <>
-      <section className="locations-intro">
+      <section className="intro-section">
         <div className="container">
-          <nav className="locations-intro__breadcrumb">
-            <a href="/" className="locations-intro__breadcrumb-link">
+          <nav className="intro-section__breadcrumb">
+            <a href="/" className="intro-section__breadcrumb-link">
               Home
             </a>
             <svg
@@ -75,15 +75,13 @@ function Locations() {
                 stroke-linejoin="round"
               />
             </svg>{" "}
-            <span className="locations-intro__breadcrumb-current">
-              Locations
-            </span>
+            <span className="intro-section__breadcrumb-current">Locations</span>
           </nav>
 
-          <div className="locations-intro__content">
-            <h1 className="locations-intro__title">Locations</h1>
+          <div className="intro-section__content">
+            <h1 className="intro-section__title">Locations</h1>
 
-            <p className="locations-intro__description">
+            <p className="intro-section__description">
               Our technicians serve homeowners across Orange County with fast
               response times, transparent pricing, and expert repair of high-end
               and built-in appliances
@@ -133,25 +131,21 @@ function Locations() {
               </div>
             </div>
           </div>
-          <div className="locations-section__features">
-            <div className="container">
-              <h2 className="locations-section__features-title">
-                Why Choose Us
-              </h2>
+          <div className="features-section__features">
+            <h2 className="features-section__features-title">Why Choose Us</h2>
 
-              <div className="locations-section__features-grid">
-                {features.map((feature, index) => (
-                  <div key={index} className="locations-section__feature">
-                    <h3 className="locations-section__feature-title">
-                      {feature.title}
-                    </h3>
+            <div className="features-section__features-grid">
+              {features.map((feature, index) => (
+                <div key={index} className="features-section__feature">
+                  <h3 className="features-section__feature-title">
+                    {feature.title}
+                  </h3>
 
-                    <p className="locations-section__feature-description">
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
+                  <p className="features-section__feature-description">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

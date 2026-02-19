@@ -26,10 +26,10 @@ function Brands() {
   ];
   return (
     <>
-      <section className="brands-intro">
+      <section className="intro-section">
         <div className="container">
-          <nav className="brands-intro__breadcrumb">
-            <a href="/" className="brands-intro__breadcrumb-link">
+          <nav className="intro-section__breadcrumb">
+            <a href="/" className="intro-section__breadcrumb-link">
               Home
             </a>
             <svg
@@ -47,13 +47,13 @@ function Brands() {
                 stroke-linejoin="round"
               />
             </svg>{" "}
-            <span className="brands-intro__breadcrumb-current">Brands</span>
+            <span className="intro-section__breadcrumb-current">Brands</span>
           </nav>
 
-          <div className="brands-intro__content">
-            <h1 className="brands-intro__title">Brands</h1>
+          <div className="intro-section__content">
+            <h1 className="intro-section__title">Brands</h1>
 
-            <p className="brands-intro__description">
+            <p className="intro-section__description">
               Our technicians serve homeowners across Orange County with fast
               response times, transparent pricing, and expert repair of high-end
               and built-in appliances
@@ -95,17 +95,17 @@ function Brands() {
                 <img src={boschImg} alt="Bosch" />
                 <img src={kitchenaidImg} alt="KitchenAid" /> */}
           </div>
-          <div className="brands-section__features">
-            <h2 className="brands-section__features-title">Why Choose Us</h2>
+          <div className="features-section__features">
+            <h2 className="features-section__features-title">Why Choose Us</h2>
 
-            <div className="brands-section__features-grid">
+            <div className="features-section__features-grid">
               {features.map((feature, index) => (
-                <div key={index} className="brands-section__feature">
-                  <h3 className="brands-section__feature-title">
+                <div key={index} className="features-section__feature">
+                  <h3 className="features-section__feature-title">
                     {feature.title}
                   </h3>
 
-                  <p className="brands-section__feature-description">
+                  <p className="features-section__feature-description">
                     {feature.description}
                   </p>
                 </div>

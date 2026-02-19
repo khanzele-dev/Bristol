@@ -7,12 +7,21 @@ import Promotions from "../pages/Promotions";
 import Reviews from "../pages/Reviews";
 import Home from "../pages/Home";
 import Services from "../pages/Services";
+import Dryer from "../pages/Dryer";
+import Trusted from "../pages/Trusted";
+import Brand from "../pages/Brand";
 
 export const routers = [
   {
     name: "Home",
     path: "/",
     component: <Home />,
+    isHeader: false,
+  },
+  {
+    name: "Brand",
+    path: "/brand",
+    component: <Brand />,
     isHeader: false,
   },
   {
@@ -62,5 +71,17 @@ export const routers = [
     path: "contact",
     component: <Contact />,
     isHeader: true,
+  },
+  {
+    name: "Dryer",
+    path: "dryer",
+    component: <Dryer />,
+    isHeader: false,
+  },
+  {
+    name: "Trusted",
+    path: "trusted",
+    component: <Trusted />,
+    isHeader: false,
   },
 ];

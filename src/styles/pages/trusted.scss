@@ -1,0 +1,174 @@
+@use "../variables.scss" as *;
+@import "../components/intro";
+@import "../components/reviews";
+@import "../components/features";
+@import "../components/need";
+@import "../components/faq";
+
+.services-section {
+  background: $color-text-white;
+  padding: 50px 0 70px;
+
+  h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 55px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 60px;
+    row-gap: 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    min-width: 0;
+    &:hover p {
+      color: #555;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-height: 300px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  &__label {
+    margin-top: 18px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    transition: all 0.1s ease;
+  }
+
+  @media (max-width: 1400px) {
+    &__grid {
+      column-gap: 40px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 40px 0 56px;
+
+    &__grid {
+      column-gap: 24px;
+      row-gap: 32px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 36px 0 48px;
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 28px;
+    }
+
+    &__label {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 32px 0 40px;
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 24px;
+    }
+
+    &__image {
+      max-height: 290px;
+    }
+
+    &__label {
+      margin-top: 12px;
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    &__label {
+      font-size: 15px;
+    }
+  }
+}
+
+.repair-section {
+  padding: 50px 0 25px;
+  &__title {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  &__grid {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  &__feature {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  &__feature-title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &__feature-description {
+    font-size: 16px;
+    margin-top: 12px;
+    line-height: 25px;
+    font-weight: 400;
+    color: $color-text-secondary;
+  }
+
+  @media (max-width: 992px) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 0 0;
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 24px;
+    }
+
+    &__title {
+      font-size: 26px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__grid {
+      margin-top: 30px;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    &__feature-description {
+      margin-top: 10px;
+    }
+  }
+}

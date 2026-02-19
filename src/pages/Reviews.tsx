@@ -23,13 +23,35 @@ const testimonials = [
   },
 ];
 
+const features = [
+  {
+    title: "Experienced Technicians",
+    description:
+      "Years of real-world repair experience across a wide range of appliances and brands.",
+  },
+  {
+    title: "Same-Day Service",
+    description:
+      "We understand urgency and do our best to fix issues on the first visit.",
+  },
+  {
+    title: "Transparent Pricing",
+    description: "Clear estimates before work begins — no surprises.",
+  },
+  {
+    title: "Warranty on Repairs",
+    description:
+      "We back our work with a service guarantee for your peace of mind.",
+  },
+];
+
 function Reviews() {
   return (
     <>
-      <section className="reviews-intro">
+      <section className="intro-section">
         <div className="container">
-          <nav className="reviews-intro__breadcrumb">
-            <a href="/" className="reviews-intro__breadcrumb-link">
+          <nav className="intro-section__breadcrumb">
+            <a href="/" className="intro-section__breadcrumb-link">
               Home
             </a>
             <svg
@@ -47,13 +69,13 @@ function Reviews() {
                 stroke-linejoin="round"
               />
             </svg>{" "}
-            <span className="reviews-intro__breadcrumb-current">Reviews</span>
+            <span className="intro-section__breadcrumb-current">Reviews</span>
           </nav>
 
-          <div className="reviews-intro__content">
-            <h1 className="reviews-intro__title">Reviews</h1>
+          <div className="intro-section__content">
+            <h1 className="intro-section__title">Reviews</h1>
 
-            <p className="reviews-intro__description">
+            <p className="intro-section__description">
               Our technicians serve homeowners across Orange County with fast
               response times, transparent pricing, and expert repair of high-end
               and built-in appliances
@@ -135,9 +157,11 @@ function Reviews() {
                 />
               </svg>
             </button>
-            <p className='reviews-section__pagination'>1</p>
-            <p className='reviews-section__pagination reviews-section__pagination--active'>2</p>
-            <p className='reviews-section__pagination'>3</p>
+            <p className="reviews-section__pagination">1</p>
+            <p className="reviews-section__pagination reviews-section__pagination--active">
+              2
+            </p>
+            <p className="reviews-section__pagination">3</p>
             <button className="reviews-section__arrow">
               <svg
                 width="16"
@@ -155,6 +179,23 @@ function Reviews() {
                 />
               </svg>
             </button>
+          </div>
+          <div className="features-section__features">
+            <h2 className="features-section__features-title">Why Choose Us</h2>
+
+            <div className="features-section__features-grid">
+              {features.map((feature, index) => (
+                <div key={index} className="features-section__feature">
+                  <h3 className="features-section__feature-title">
+                    {feature.title}
+                  </h3>
+
+                  <p className="features-section__feature-description">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

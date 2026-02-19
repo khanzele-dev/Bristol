@@ -60,10 +60,10 @@ const features = [
 function Services() {
   return (
     <>
-      <section className="services-intro">
+      <section className="intro-section">
         <div className="container">
-          <nav className="services-intro__breadcrumb">
-            <a href="/" className="services-intro__breadcrumb-link">
+          <nav className="intro-section__breadcrumb">
+            <a href="/" className="intro-section__breadcrumb-link">
               Home
             </a>
             <svg
@@ -81,13 +81,13 @@ function Services() {
                 stroke-linejoin="round"
               />
             </svg>
-            <span className="services-intro__breadcrumb-current">Services</span>
+            <span className="intro-section__breadcrumb-current">Services</span>
           </nav>
 
-          <div className="services-intro__content">
-            <h1 className="services-intro__title">Services</h1>
+          <div className="intro-section__content">
+            <h1 className="intro-section__title">Services</h1>
 
-            <p className="services-intro__description">
+            <p className="intro-section__description">
               Our technicians serve homeowners across Orange County with fast
               response times, transparent pricing, and expert repair of high-end
               and built-in appliances
@@ -95,32 +95,32 @@ function Services() {
           </div>
         </div>
       </section>
-      <section className="services-section">
+      <section className="services">
         <div className="container">
-          <div className="services-section__grid">
+          <div className="services__grid">
             {services.map((service, index) => (
-              <NavLink to="#" key={index} className="services-section__item">
+              <NavLink to="#" key={index} className="services__item">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="services-section__image"
+                  className="services__image"
                 />
-                <p className="services-section__label">{service.title}</p>
+                <p className="services__label">{service.title}</p>
               </NavLink>
             ))}
           </div>
 
-          <div className="services-section__features">
-            <h2 className="services-section__features-title">Why Choose Us</h2>
+          <div className="features-section__features">
+            <h2 className="features-section__features-title">Why Choose Us</h2>
 
-            <div className="services-section__features-grid">
+            <div className="features-section__features-grid">
               {features.map((feature, index) => (
-                <div key={index} className="services-section__feature">
-                  <h3 className="services-section__feature-title">
+                <div key={index} className="features-section__feature">
+                  <h3 className="features-section__feature-title">
                     {feature.title}
                   </h3>
 
-                  <p className="services-section__feature-description">
+                  <p className="features-section__feature-description">
                     {feature.description}
                   </p>
                 </div>

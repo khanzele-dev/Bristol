@@ -1,53 +1,6 @@
 @use "../variables.scss" as *;
-
-.promotions-intro {
-  background-color: #f3f3f3;
-  padding: 40px 0 85px;
-
-  &__breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 30px;
-    font-size: 14px;
-    color: $color-text-secondary;
-  }
-
-  &__breadcrumb-link {
-    color: $color-text-secondary;
-    text-decoration: none;
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: #171717;
-    }
-  }
-
-  &__breadcrumb-current {
-    color: #171717;
-    font-weight: 500;
-  }
-
-  &__content {
-    max-width: 720px;
-  }
-
-  &__title {
-    font-size: 42px;
-    font-weight: 600;
-    color: $color-text;
-    letter-spacing: 0.5%;
-    margin-top: 25px;
-  }
-
-  &__description {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 32px;
-    color: #525252;
-  }
-}
+@import "../components/intro";
+@import "../components/features";
 
 .promotions-section {
   background: $color-text-white;
@@ -124,8 +77,6 @@
     color: $color-text-white;
   }
 
-  /* Steps */
-
   &__steps {
     margin-top: 50px;
   }
@@ -170,40 +121,190 @@
     color: $color-secondary;
   }
 
-  /* Features */
-
-  &__features {
-    margin-top: 70px;
-    width: 100%;
+  @media (max-width: 1200px) {
+    &__grid {
+      gap: 60px;
+    }
   }
 
-  &__features-title {
-    font-size: 30px;
-    font-weight: 600;
+  @media (max-width: 992px) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 60px;
+    }
+
+    &__card-title {
+      font-size: 22px;
+    }
+
+    &__card-description {
+      font-size: 18px;
+    }
+
+    &__banner {
+      min-height: 520px;
+    }
+
+    &__banner-title {
+      font-size: 44px;
+    }
+
+    &__steps-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    &__steps-title {
+      font-size: 26px;
+    }
   }
 
-  &__features-grid {
-    margin-top: 32px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 32px;
+  @media (max-width: 768px) {
+    &__heading {
+      font-size: 26px;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 45px;
+      margin-top: 35px;
+    }
+
+    &__card-title {
+      font-size: 20px;
+    }
+
+    &__card-description {
+      font-size: 16px;
+    }
+
+    &__banner {
+      min-height: 460px;
+    }
+
+    &__banner-content {
+      max-width: 500px;
+      padding: 0 0 50px 50px;
+    }
+
+    &__banner-content button {
+      font-size: 17px;
+      width: 260px;
+      height: 62px;
+      margin-top: 28px;
+    }
+
+    &__banner-title {
+      font-size: 38px;
+    }
+
+    &__steps {
+      margin-top: 40px;
+    }
+
+    &__steps-title {
+      font-size: 24px;
+    }
+
+    &__steps-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    &__step-text {
+      font-size: 17px;
+    }
   }
 
-  &__feature {
-    max-width: 280px;
-  }
+  @media (max-width: 480px) {
+    padding: 30px 0;
 
-  &__feature-title {
-    font-size: 20px;
-    font-weight: 500;
-    color: #171717;
-  }
+    &__heading {
+      font-size: 24px;
+    }
 
-  &__feature-description {
-    font-size: 16px;
-    margin-top: 12px;
-    line-height: 25px;
-    font-weight: 400;
-    color: $color-text-secondary;
+    &__grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 25px 45px;
+      margin-top: 25px;
+    }
+
+    &__card {
+      gap: 12px;
+    }
+
+    &__card-title {
+      font-size: 18px;
+    }
+
+    &__card-description {
+      font-size: 14px;
+    }
+
+    &__banner {
+      margin-top: 30px;
+      min-height: 450px;
+    }
+
+    &__banner-content {
+      max-width: 440px;
+      padding: 0 0 33px 40px;
+    }
+
+    &__banner-content button {
+      font-size: 14px;
+      width: 215px;
+      height: 50px;
+      margin-top: 24px;
+    }
+
+    &__banner-title {
+      font-size: 30px;
+    }
+
+    &__steps {
+      margin-top: 30px;
+    }
+
+    &__steps-title {
+      font-size: 24px;
+    }
+
+    &__steps-grid {
+      margin-top: 30px;
+      grid-template-columns: 1fr;
+      gap: 35px;
+    }
+
+    &__step {
+      gap: 30px;
+    }
+
+    &__step-number {
+      width: 48px;
+      height: 48px;
+      font-size: 20px;
+      flex-shrink: 0;
+      position: relative;
+      background-color: #fff;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
+        width: 1px;
+        height: calc(100% + 35px);
+        background: #ddd;
+      }
+    }
+    &__step:last-child &__step-number::after {
+      display: none;
+    }
+
+    &__step-text {
+      font-size: 20px;
+    }
   }
 }

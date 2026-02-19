@@ -22,9 +22,11 @@
   }
 
   &__contacts {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    gap: 120px;
+    column-gap: 120px;
+    row-gap: 24px;
   }
 
   &__contact {
@@ -102,9 +104,218 @@
         color: $color-text-secondary;
 
         &:hover {
-          color: $color-text-white
+          color: $color-text-white;
         }
       }
+    }
+  }
+
+  // ============================================================
+  // BREAKPOINTS
+  // ============================================================
+
+  // --- 1400px: уменьшаем большие gap ---
+  @media (max-width: 1400px) {
+    &__contacts {
+      column-gap: 80px;
+    }
+
+    &__columns {
+      gap: 80px;
+    }
+  }
+
+  // --- 1200px: ещё сжимаем отступы ---
+  @media (max-width: 1200px) {
+    &__contacts {
+      column-gap: 48px;
+    }
+
+    &__columns {
+      gap: 48px;
+    }
+  }
+
+  // --- 992px: contacts в 2 колонки + columns gap уменьшается ---
+  @media (max-width: 992px) {
+    padding: 56px 0 72px;
+
+    &__logo svg {
+      width: 220px;
+      height: auto;
+    }
+
+    &__contacts {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 40px;
+      row-gap: 24px;
+    }
+
+    &__columns {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    &__column {
+      h4 {
+        font-size: 17px;
+      }
+    }
+  }
+
+  // --- 768px: border скрываем, columns в 2 колонки ---
+  @media (max-width: 768px) {
+    padding: 44px 0 56px;
+
+    &__brand {
+      align-items: flex-start;
+      flex-direction: column;
+      row-gap: 24px;
+    }
+
+    &__logo svg {
+      width: 200px;
+      height: auto;
+    }
+
+    &__contacts {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 32px;
+      row-gap: 20px;
+    }
+
+    &__border {
+      display: none;
+    }
+
+    &__columns {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    &__column {
+      h4 {
+        font-size: 17px;
+      }
+
+      ul li {
+        font-size: 15px;
+      }
+    }
+  }
+
+  // --- 576px: contacts в 2 колонки с меньшим gap ---
+  @media (max-width: 576px) {
+    padding: 36px 0 48px;
+
+    &__contacts {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 24px;
+    }
+
+    &__columns {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    &__column {
+      h4 {
+        font-size: 16px;
+      }
+
+      ul {
+        gap: 10px;
+
+        li {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  // --- 480px: оригинальный мобильный breakpoint ---
+  @media (max-width: 480px) {
+    padding: 30px 0 40px;
+
+    &__brand {
+      align-items: flex-start;
+      flex-direction: column;
+      row-gap: 30px;
+    }
+
+    &__logo {
+      flex-shrink: 0;
+    }
+
+    &__contacts {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 70px;
+      row-gap: 24px;
+    }
+
+    &__contact {
+      &-content {
+        gap: 6px;
+
+        span {
+          font-size: 14px;
+          text-transform: lowercase;
+          color: $color-text-secondary;
+        }
+
+        a,
+        p {
+          font-size: 14px;
+          color: $color-text-white;
+          text-decoration: none;
+          transition: 0.1s ease;
+          margin: 0;
+        }
+
+        a:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    &__border {
+      display: none;
+    }
+
+    &__columns {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      column-gap: 110px;
+      row-gap: 24px;
+    }
+
+    &__column {
+      h4 {
+        font-size: 16px;
+      }
+
+      ul {
+        margin-top: 16px;
+
+        li {
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  // --- 360px: logo уменьшается, contacts в 1 колонку ---
+  @media (max-width: 360px) {
+    &__logo svg {
+      width: 180px;
+      height: auto;
+    }
+
+    &__contacts {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
     }
   }
 }

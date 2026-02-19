@@ -1,13 +1,50 @@
 import { NavLink } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
 import { routers } from "../config";
 import "../styles/components/header.scss";
 
+const locationLinks = [
+  { name: "Irvine", path: "/locations/irvine" },
+  { name: "Newport Beach", path: "/locations/newport-beach" },
+  { name: "Newport Coast", path: "/locations/newport-coast" },
+  { name: "Laguna Beach", path: "/locations/laguna-beach" },
+  { name: "Laguna Niguel", path: "/locations/laguna-niguel" },
+  { name: "Huntington Beach", path: "/locations/huntington-beach" },
+];
+
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [locationsOpen, setLocationsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setMenuOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  // Блокировать скролл когда меню открыто
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
+  const handleNavClick = () => {
+    setMenuOpen(false);
+    setLocationsOpen(false);
+  };
+
   return (
-    <header className="header">
+    <header className="header" ref={menuRef}>
       <div className="container header__container">
         <div className="header__logo">
-          <NavLink to="/">
+          <NavLink to="/" onClick={handleNavClick}>
             <svg
               width="222"
               height="64"
@@ -114,7 +151,7 @@ function Header() {
         <nav className="header__nav">
           <ul className="header__nav-list">
             {routers.map((el, i) =>
-              i !== 0 ? (
+              el.isHeader ? (
                 <li key={i} className="header__nav-item">
                   <NavLink
                     to={el.path}
@@ -133,6 +170,128 @@ function Header() {
         <div className="header__actions">
           <a className="btn btn--outline">Schedule service</a>
           <a href="tel:9499920637" className="btn btn--primary">
+            (949) 992-0637
+          </a>
+        </div>
+
+        <button
+          className={`header__burger ${menuOpen ? "header__burger--open" : ""}`}
+          onClick={() => setMenuOpen((v) => !v)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? (
+            <svg
+              width="44"
+              height="44"
+              viewBox="0 0 44 44"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M33 11L11 33"
+                stroke="black"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M11 11L33 33"
+                stroke="black"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          ) : (
+            <svg
+              width="35"
+              height="13"
+              viewBox="0 0 35 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="35"
+                y1="0.5"
+                x2="-4.37114e-08"
+                y2="0.499997"
+                stroke="black"
+              />
+              <line
+                x1="35"
+                y1="12.5"
+                x2="-4.37114e-08"
+                y2="12.5"
+                stroke="black"
+              />
+            </svg>
+          )}
+        </button>
+      </div>
+
+      <div
+        className={`header__mobile-menu ${menuOpen ? "header__mobile-menu--open" : ""}`}
+      >
+        <nav className="header__mobile-nav">
+          <ul className="header__mobile-nav-list">
+            {routers.map((el, i) => {
+              if (!el.isHeader) return null;
+
+              if (el.name === "Locations") {
+                return (
+                  <li
+                    key={i}
+                    className="header__mobile-nav-item header__mobile-nav-item--dropdown"
+                  >
+                    <button
+                      className={`header__mobile-nav-link header__mobile-nav-link--toggle ${locationsOpen ? "header__mobile-nav-link--active" : ""}`}
+                      onClick={() => setLocationsOpen((v) => !v)}
+                    >
+                      {el.name}
+                    </button>
+                    <ul
+                      className={`header__mobile-dropdown ${locationsOpen ? "header__mobile-dropdown--open" : ""}`}
+                    >
+                      {locationLinks.map((loc, j) => (
+                        <li key={j}>
+                          <NavLink
+                            to={loc.path}
+                            className="header__mobile-dropdown-link"
+                            onClick={handleNavClick}
+                          >
+                            {loc.name}
+                          </NavLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                );
+              }
+
+              return (
+                <li key={i} className="header__mobile-nav-item">
+                  <NavLink
+                    to={el.path}
+                    className={({ isActive }) =>
+                      `header__mobile-nav-link ${isActive ? "header__mobile-nav-link--active" : ""}`
+                    }
+                    onClick={handleNavClick}
+                  >
+                    {el.name}
+                  </NavLink>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+
+        <div className="header__mobile-actions">
+          <a className="btn btn--outline" onClick={handleNavClick}>
+            Schedule service
+          </a>
+          <a
+            href="tel:9499920637"
+            className="btn--solid"
+            onClick={handleNavClick}
+          >
             (949) 992-0637
           </a>
         </div>

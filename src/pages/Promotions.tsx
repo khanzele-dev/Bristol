@@ -52,10 +52,10 @@ function Promotions() {
 
   return (
     <>
-      <section className="promotions-intro">
+      <section className="intro-section">
         <div className="container">
-          <nav className="promotions-intro__breadcrumb">
-            <a href="/" className="promotions-intro__breadcrumb-link">
+          <nav className="intro-section__breadcrumb">
+            <a href="/" className="intro-section__breadcrumb-link">
               Home
             </a>
             <svg
@@ -73,15 +73,15 @@ function Promotions() {
                 stroke-linejoin="round"
               />
             </svg>{" "}
-            <span className="promotions-intro__breadcrumb-current">
+            <span className="intro-section__breadcrumb-current">
               Promotions
             </span>
           </nav>
 
-          <div className="promotions-intro__content">
-            <h1 className="promotions-intro__title">Promotions</h1>
+          <div className="intro-section__content">
+            <h1 className="intro-section__title">Promotions</h1>
 
-            <p className="promotions-intro__description">
+            <p className="intro-section__description">
               Our technicians serve homeowners across Orange County with fast
               response times, transparent pricing, and expert repair of high-end
               and built-in appliances
@@ -108,7 +108,6 @@ function Promotions() {
             ))}
           </div>
 
-          {/* Banner */}
           <div
             className="promotions-section__banner"
             style={{ backgroundImage: `url(${promoImg})` }}
@@ -128,7 +127,6 @@ function Promotions() {
             </div>
           </div>
 
-          {/* Steps */}
           <div className="promotions-section__steps">
             <h2 className="promotions-section__steps-title">
               How to Claim the Offer
@@ -146,20 +144,17 @@ function Promotions() {
             </div>
           </div>
 
-          {/* Features */}
-          <div className="promotions-section__features">
-            <h2 className="promotions-section__features-title">
-              Why Choose Us
-            </h2>
+          <div className="features-section__features">
+            <h2 className="features-section__features-title">Why Choose Us</h2>
 
-            <div className="promotions-section__features-grid">
+            <div className="features-section__features-grid">
               {features.map((feature, index) => (
-                <div key={index} className="promotions-section__feature">
-                  <h3 className="promotions-section__feature-title">
+                <div key={index} className="features-section__feature">
+                  <h3 className="features-section__feature-title">
                     {feature.title}
                   </h3>
 
-                  <p className="promotions-section__feature-description">
+                  <p className="features-section__feature-description">
                     {feature.description}
                   </p>
                 </div>

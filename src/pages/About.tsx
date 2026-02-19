@@ -85,8 +85,6 @@ function About() {
           </div>
         </div>
       </section>
-
-      {/* WHO WE ARE */}
       <section className="about-who">
         <div className="container about-who__container">
           <div className="about-who__grid">
@@ -143,8 +141,7 @@ function About() {
               <ul>
                 {values.map((value, index) => (
                   <li key={index}>
-                    <span style={{ fontWeight: "700" }}>{value.title}</span> —{" "}
-                    {value.description}
+                    <span>{value.title}</span> — {value.description}
                   </li>
                 ))}
               </ul>
@@ -152,9 +149,8 @@ function About() {
           </div>
         </div>
       </section>
-
       <section className="about-features">
-        <div className="container">
+        <div className="container about-features__container">
           <h2 className="about-features__features-title">Why Choose Us</h2>
 
           <div className="about-features__features-grid">

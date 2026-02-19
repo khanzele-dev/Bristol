@@ -1,8 +1,8 @@
 import Header from "./components/Header";
-import "./App.scss";
+import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
 import { routers } from "./config";
-import Footer from "./components/Footer";
+import "./App.scss";
 
 function App() {
   return (
