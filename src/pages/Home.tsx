@@ -8,14 +8,8 @@ import dryerImg from "../assets/services/dryerImg.png";
 import coolerImg from "../assets/services/coolerImg.png";
 import subzeroImg from "../assets/brands/subzero.png";
 import wolfImg from "../assets/brands/wolf.png";
-// import vikingImg from "../assets/brands/viking.png";
-// import thermadorImg from "../assets/brands/thermador.png";
-// import monogramImg from "../assets/brands/monogram.png";
-// import mieleImg from "../assets/brands/miele.png";
-// import boschImg from "../assets/brands/bosch.png";
-// import kitchenaidImg from "../assets/brands/kitchenaid.png";
-import "../styles/pages/home.scss";
 import { NavLink } from "react-router-dom";
+import "../styles/pages/home.scss";
 
 const testimonials = [
   {

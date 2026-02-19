@@ -12,6 +12,16 @@ const locationLinks = [
   { name: "Huntington Beach", path: "/locations/huntington-beach" },
 ];
 
+const servicesLinks = [
+  { name: "SubZero", path: "/services/subzero" },
+  { name: "Wolf", path: "/services/wolf" },
+];
+
+const brandLinks = [
+  { name: "SubZero", path: "/brands/subzero" },
+  { name: "Wolf", path: "/brands/wolf" },
+];
+
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [locationsOpen, setLocationsOpen] = useState(false);
@@ -234,7 +244,36 @@ function Header() {
           <ul className="header__mobile-nav-list">
             {routers.map((el, i) => {
               if (!el.isHeader) return null;
-
+              if (el.name === "Services") {
+                return (
+                  <li
+                    key={i}
+                    className="header__mobile-nav-item header__mobile-nav-item--dropdown"
+                  >
+                    <button
+                      className={`header__mobile-nav-link header__mobile-nav-link--toggle ${locationsOpen ? "header__mobile-nav-link--active" : ""}`}
+                      onClick={() => setLocationsOpen((v) => !v)}
+                    >
+                      {el.name}
+                    </button>
+                    <ul
+                      className={`header__mobile-dropdown ${locationsOpen ? "header__mobile-dropdown--open" : ""}`}
+                    >
+                      {servicesLinks.map((loc, j) => (
+                        <li key={j}>
+                          <NavLink
+                            to={loc.path}
+                            className="header__mobile-dropdown-link"
+                            onClick={handleNavClick}
+                          >
+                            {loc.name}
+                          </NavLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                );
+              }
               if (el.name === "Locations") {
                 return (
                   <li

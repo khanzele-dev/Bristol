@@ -102,11 +102,11 @@ function FAQ() {
                 </p>
 
                 <div className="faq-main__cta-actions">
-                  <a href="#" className="btn btn--outline">
-                    Schedule Service
-                  </a>
                   <a href="tel:9499920637" className="btn btn--primary">
                     Call now
+                  </a>
+                  <a href="#" className="btn btn--outline">
+                    Schedule Service
                   </a>
                 </div>
               </div>
